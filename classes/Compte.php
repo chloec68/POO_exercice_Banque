@@ -52,11 +52,6 @@ class Compte{
         return "Le compte a été crédité de $montant. Solde du compte : ".$this->soldeInitial." ".$this->devise;
     }
 
-    // public function debiter(float $montant){
-    //     //ajouter un if : débit seulement si soldeInitial suffisant
-    //     $this->soldeInitial-=$montant;
-    //     return "Le compte a été débité de $montant. Solde du compte : ".$this->soldeInitial." ".$this->devise;
-    // }
     public function debiter(float $montant){
         if($this->soldeInitial>=$montant){
             $this->soldeInitial-=$montant;
